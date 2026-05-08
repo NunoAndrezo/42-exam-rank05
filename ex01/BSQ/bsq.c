@@ -23,7 +23,10 @@ int	main(int ac, char *av[])
 static int execute_bsq(FILE *file)
 {
 	char *line = NULL;
-	if (getline(&line, ))
+	size_t n;
+	if (getline(&line, &n, file) == -1)
+		return -1;
+	
 }
 
 static int check_file(char *s)
