@@ -2,7 +2,7 @@
 
 Assignment name : life
 Expected files : *.c *.h
-Allowed functions: atoi, read, putchar, malloc, calloc, realloc, free
+Allowed functions: atoi, read, putchar, malloc, calloc, realloc, free, printf
 --------------------------------------------------------------------------------
 You must write a program that will simulate a game of life.
 The prototype of this program is the following:
