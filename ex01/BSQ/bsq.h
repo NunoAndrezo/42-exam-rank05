@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/types.h>
+#include <stdbool.h>
+#include <string.h>
 
 /*  
  - The number of lines on the map;
@@ -20,6 +22,7 @@ typedef struct s_bsq
 	char	full;
 
 	char	**map;
+	size_t	array_size;
 
 	int		x_start;
 	int		y_start;
