@@ -26,7 +26,7 @@ typedef struct s_bsq
 
 	int		x_start;
 	int		y_start;
-	int		biggest;
+	int		sqr_size;
 } t_bsq;
 
 #endif
