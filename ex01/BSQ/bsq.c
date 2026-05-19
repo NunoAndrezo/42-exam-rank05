@@ -27,7 +27,7 @@ int	main(int ac, char *av[])
 	{
 		FILE *file;
 		if ((file = fopen(av[1], "r")) == NULL)
-			return (fprintf(stderr, "map error\n"), 1);
+			return (fprintf(stderr, "Error: blabla\n"), fclose(file), 1);
 		if (execute_bsq(file, &bsq))
 			return (fclose(file), fprintf(stderr, "map error\n"), 1);
 		print_map(&bsq);
@@ -35,7 +35,7 @@ int	main(int ac, char *av[])
 		free_map(&bsq, bsq.n_lines);
 	}
 	else
-		return (fprintf(stderr, "map error\n"), 1);
+		return (fprintf(stderr, "Error: blabla\n"), 1);
 	return (0);
 }
 
@@ -78,7 +78,7 @@ static int execute_bsq(FILE *file, t_bsq *bsq)
 	while (y < height)
 	{
 		x = 0;
-		while (bsq->map[y][x])
+		while (bsq->map[y][x] && bsq->map[y][x] != '\n') // ponto
 		{
 			if (bsq->map[y][x] == bsq->obstacle)
 				matrix[y][x] = 0;
